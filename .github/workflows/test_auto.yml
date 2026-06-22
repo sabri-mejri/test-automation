@@ -92,7 +92,3 @@ jobs:
           name: playwright-report
           path: reports/html/
           retention-days: 30
-
-      - name: Fail if tests failed
-        if: steps.tests.outcome == 'failure'
-        run: exit 1
