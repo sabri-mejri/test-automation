@@ -2,11 +2,24 @@ name: Playwright Tests + QApilot
 
 on:
   workflow_dispatch:
+    inputs:
+      qapilot_url:
+        description: "QApilot instance URL (e.g. https://your-instance.com)"
+        required: true
+        type: string
+      qapilot_api_key:
+        description: "QApilot API key (starts with qp_...)"
+        required: true
+        type: string
+      qapilot_project_id:
+        description: "QApilot project UUID"
+        required: true
+        type: string
 
 env:
-  QAPILOT_URL: ${{ secrets.QAPILOT_URL }}
-  QAPILOT_API_KEY: ${{ secrets.QAPILOT_API_KEY }}
-  QAPILOT_PROJECT_ID: ${{ secrets.QAPILOT_PROJECT_ID }}
+  QAPILOT_URL: ${{ inputs.qapilot_url }}
+  QAPILOT_API_KEY: ${{ inputs.qapilot_api_key }}
+  QAPILOT_PROJECT_ID: ${{ inputs.qapilot_project_id }}
 
 jobs:
   test:
