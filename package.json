@@ -1,0 +1,16 @@
+{
+  "name": "qapilot-test-automation-demo",
+  "version": "1.0.0",
+  "description": "Demo: Playwright tests with screenshots, video, and QApilot CLI integration",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  },
+  "dependencies": {
+    "qapilot-cli": "^1.0.8"
+  }
+}
