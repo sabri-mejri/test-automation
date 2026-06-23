@@ -3,10 +3,6 @@ name: Playwright Tests + QApilot
 on:
   workflow_dispatch:
     inputs:
-      qapilot_api_key:
-        description: "QApilot API key (starts with qp_...)"
-        required: true
-        type: string
       qapilot_project_id:
         description: "QApilot project UUID"
         required: true
@@ -14,7 +10,7 @@ on:
 
 env:
   QAPILOT_URL: https://qapilot-1.onrender.com
-  QAPILOT_API_KEY: ${{ inputs.qapilot_api_key }}
+  QAPILOT_API_KEY: qp_62ba49edb8d2eeb3962907fbd03f4aa73f64e7de199a9a31b22e53806631a3ff
   QAPILOT_PROJECT_ID: ${{ inputs.qapilot_project_id }}
 
 jobs:
